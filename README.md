@@ -17,7 +17,9 @@ written in coffee script and you should be too (that was deliberate).
 
 #### Formatting
 It's even possible to use string formatting with it, like:
+
     log.info "that %s looked like %j", object_name, object
+
 Under the covers it's just using node's util.format and supports what
 you would expect.
 
