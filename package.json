@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "A very simple logging module.  Because all the others are too much.",
   "main": "index.coffee",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "coffee-script": "~1.6.3"
   },
   "scripts": {
