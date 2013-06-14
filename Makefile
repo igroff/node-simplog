@@ -6,7 +6,7 @@ node_modules:
 clean:
 	rm -rf ./node_modules/
 
-test:
+test: node_modules
 	./test/run.sh
 
 pass/%:
