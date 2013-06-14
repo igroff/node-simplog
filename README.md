@@ -15,5 +15,10 @@ written in coffee script and you should be too (that was deliberate).
     log.debug "this is a debug message and will only show up if process.env.DEBUG is truthy"
     log.event "this will log with the type [EVENT] and will only show up if process.env.DEBUG is truthy"
 
+#### Formatting
+It's even possible to use string formatting with it, like:
+    log.info "that %s looked like %j", object_name, object
+Under the covers it's just using node's util.format and supports what
+you would expect.
 
 
