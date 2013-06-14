@@ -1,6 +1,6 @@
 # simplog
 
-The simplest log module imaginable (while still being useful).
+The simplest useful log module imaginable. 
 
 Supports error, info, warn, debug and a handy event method.  It's
 written in coffee script and you should be too (that was deliberate).
