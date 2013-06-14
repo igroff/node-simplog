@@ -1,0 +1,23 @@
+{
+  "name": "simplog",
+  "version": "0.0.1",
+  "description": "A very simple logging module.  Because all the others are too much.",
+  "main": "index.coffee",
+  "dependencies": {},
+  "devDependencies": {
+    "coffee-script": "~1.6.3"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/intimonkey/node-simplog.git"
+  },
+  "keywords": [
+    "log",
+    "node"
+  ],
+  "author": "Ian Groff",
+  "license": "BSD"
+}
