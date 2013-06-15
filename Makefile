@@ -11,8 +11,11 @@ test/results:
 
 clean:
 	rm -rf ./node_modules/
+	rm -rf ./test/node_modules/
+	rm -rf ./test/results/*
 
 test: node_modules test/results log.js
+	cd ./test && npm install .
 	./test/run.sh
 
 commit: test
