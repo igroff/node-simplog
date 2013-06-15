@@ -2,8 +2,8 @@
   "name": "simplog",
   "version": "0.0.1",
   "description": "A very simple logging module.  Because all the others are too much.",
-  "main": "index.coffee",
-  "dependencies": {
+  "main": "log.js",
+  "devDependencies": {
     "coffee-script": "~1.6.3"
   },
   "scripts": {

@@ -1,4 +1,3 @@
 #! /usr/bin/env ./node_modules/.bin/coffee
 log   = require '../../index.coffee'
-
 log.warn "look ma, a warning"
