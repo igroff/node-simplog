@@ -2,6 +2,11 @@
 
 The simplest useful log module imaginable. 
 
+Writes messages to stdout (as in [12 Factor
+App] (http://www.12factor.net/logs)) using the node.js util.log and util.format
+methods.
+
+
 #### Installation
     npm install git+https://github.com/intimonkey/node-simplog.git
 

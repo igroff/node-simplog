@@ -1,7 +1,7 @@
 {
   "name": "simplog",
   "version": "0.0.3",
-  "description": "A very simple logging module.  Because all the others are too much.",
+  "description": "A very simple logging module.  Because all the others are too much.\n This module relies on the node util module to provide timestamping and formatting of log messages.\n Messages are written to stdout via util.log.",
   "main": "log.js",
   "devDependencies": {
     "coffee-script": "~1.6.3"
