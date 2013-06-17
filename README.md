@@ -8,7 +8,7 @@ methods.
 
 
 #### Installation
-    npm install git+https://github.com/intimonkey/node-simplog.git
+    npm install simplog
 
 #### Usage
 Supports error, info, warn, debug and a handy event method.  It's
