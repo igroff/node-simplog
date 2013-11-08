@@ -13,7 +13,7 @@ function run_tests(){
       filter_file=${test%tests/*}filters${test#*/tests}
       mkdir -p `dirname $results_file`
       if [ -f ${filter_file} ]; then
-        $test_file | $filter_file > $results_file 2>&1
+        $test_file 2>&1 | $filter_file > $results_file 2>&1
       else
         $test_file > $results_file 2>&1
       fi
