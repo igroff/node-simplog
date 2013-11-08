@@ -1,0 +1,5 @@
+#! /usr/bin/env bash
+MY_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# this should produce no output
+node ${MY_DIR}/../lib/itIsStderr.js 2>/dev/null
