@@ -3,9 +3,9 @@ util    = require 'util'
 write = (level, message, formatParams) ->
   if formatParams
     formatParams.unshift message
-    process.stderr.write "#{new Date()} [#{level}] #{util.format.apply util.format, formatParams}"
+    util.log "[#{level}] #{util.format.apply util.format, formatParams}"
   else
-    process.stderr.write "#{new Date()} [#{level}] #{message}"
+    util.log "[#{level}] #{message}"
 
 log =
   error: (message, others...) -> write "ERROR", message, others
