@@ -8,9 +8,9 @@
   write = function(level, message, formatParams) {
     if (formatParams) {
       formatParams.unshift(message);
-      return process.stderr.write("" + (new Date()) + " [" + level + "] " + (util.format.apply(util.format, formatParams)));
+      return util.log("[" + level + "] " + (util.format.apply(util.format, formatParams)));
     } else {
-      return process.stderr.write("" + (new Date()) + " [" + level + "] " + message);
+      return util.log("[" + level + "] " + message);
     }
   };
 
