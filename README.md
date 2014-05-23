@@ -33,4 +33,8 @@ As of 0.0.5 the output includes a pid as follows
 
     22 May 22:07:44 - [15794] [ERROR] look ma, an error
 
-If you decide you like the old way, sans pid, you can make process.env.NOLOGPID truthy and it will go away.
+If you decide you like the old way, sans pid:
+
+    22 May 22:07:44 - [ERROR] look ma, an error
+
+you can make process.env.NOLOGPID truthy and it will go away.
