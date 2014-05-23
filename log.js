@@ -8,9 +8,17 @@
   write = function(level, message, formatParams) {
     if (formatParams) {
       formatParams.unshift(message);
-      return util.log("[" + process.pid + "] [" + level + "] " + (util.format.apply(util.format, formatParams)));
+      if (process.env.NOLOGPID) {
+        return util.log("[" + level + "] " + (util.format.apply(util.format, formatParams)));
+      } else {
+        return util.log("[" + process.pid + "] [" + level + "] " + (util.format.apply(util.format, formatParams)));
+      }
     } else {
-      return util.log("[" + process.pid + "] [" + level + "] " + message);
+      if (process.env.NOLOGPID) {
+        return util.log("[" + level + "] " + message);
+      } else {
+        return util.log("[" + process.pid + "] [" + level + "] " + message);
+      }
     }
   };
 
