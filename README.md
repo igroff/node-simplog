@@ -37,4 +37,4 @@ If you decide you like the old way, sans pid:
 
     22 May 22:07:44 - [ERROR] look ma, an error
 
-you can make process.env.NOLOGPID truthy and it will go away.
+you can make `process.env.NOLOGPID` truthy and it will go away.
