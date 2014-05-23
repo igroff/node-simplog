@@ -8,9 +8,9 @@
   write = function(level, message, formatParams) {
     if (formatParams) {
       formatParams.unshift(message);
-      return util.log("[" + level + "] " + (util.format.apply(util.format, formatParams)));
+      return util.log("[" + process.pid + "] [" + level + "] " + (util.format.apply(util.format, formatParams)));
     } else {
-      return util.log("[" + level + "] " + message);
+      return util.log("[" + process.pid + "] [" + level + "] " + message);
     }
   };
 

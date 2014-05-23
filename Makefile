@@ -3,7 +3,7 @@
 node_modules: 
 	npm install .
 
-log.js: node_modules
+log.js: node_modules src/log.coffee
 	./node_modules/.bin/coffee --output . --compile src/log.coffee
 
 test/results:
