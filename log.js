@@ -41,14 +41,14 @@
     debug: function() {
       var message, others;
       message = arguments[0], others = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-      if (process.env.DEBUG) {
+      if (process.env.DEBUG || (typeof window !== "undefined" && window !== null ? window.debug : void 0)) {
         return write("DEBUG", message, others);
       }
     },
     event: function() {
       var message, others;
       message = arguments[0], others = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-      if (process.env.DEBUG) {
+      if (process.env.DEBUG || (typeof window !== "undefined" && window !== null ? window.debug : void 0)) {
         return write("EVENT", message, others);
       }
     }

@@ -18,10 +18,10 @@ log =
   info:  (message, others...) -> write "INFO", message, others
   warn:  (message, others...) -> write "WARN", message, others
   debug: (message, others...) ->
-    if process.env.DEBUG
+    if process.env.DEBUG or window?.debug
       write "DEBUG", message, others
   event: (message, others...) ->
-    if process.env.DEBUG
+    if process.env.DEBUG or window?.debug
       write "EVENT", message, others
 
 module.exports = log
