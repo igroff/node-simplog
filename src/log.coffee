@@ -3,12 +3,12 @@ util    = require 'util'
 write = (level, message, formatParams) ->
   if formatParams
     formatParams.unshift message
-    if process.env.NOLOGPID or window
+    if process.env.NOLOGPID or window?
       util.log "[#{level}] #{util.format.apply util.format, formatParams}"
     else
       util.log "[#{process.pid}] [#{level}] #{util.format.apply util.format, formatParams}"
   else
-    if process.env.NOLOGPID or window
+    if process.env.NOLOGPID or window?
       util.log "[#{level}] #{message}"
     else
       util.log "[#{process.pid}] [#{level}] #{message}"
