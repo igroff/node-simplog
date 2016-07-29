@@ -1,6 +1,6 @@
 {
   "name": "simplog",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A very simple logging module.  Because all the others are too much.\n This module relies on the node util module to provide timestamping and formatting of log messages.\n Messages are written to stdout via util.log.",
   "main": "log.js",
   "devDependencies": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/intimonkey/node-simplog.git"
+    "url": "https://github.com/igroff/node-simplog.git"
   },
   "keywords": [
     "log",

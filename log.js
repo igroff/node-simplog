@@ -6,6 +6,9 @@
   util = require('util');
 
   write = function(level, message, formatParams) {
+    if (process.env.DISABLE_LOGGING) {
+      return;
+    }
     if (formatParams) {
       formatParams.unshift(message);
       if (process.env.NOLOGPID || (typeof window !== "undefined" && window !== null)) {

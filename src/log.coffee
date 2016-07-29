@@ -1,6 +1,7 @@
 util    = require 'util'
 
 write = (level, message, formatParams) ->
+  return if process.env.DISABLE_LOGGING
   if formatParams
     formatParams.unshift message
     if process.env.NOLOGPID or window?
