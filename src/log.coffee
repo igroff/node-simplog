@@ -1,5 +1,8 @@
 util    = require 'util'
 
+debugEnabled = () ->
+  return window?.debug or process.env.DEBUG?.toLowerCase() isnt "false"
+
 write = (level, message, formatParams) ->
   return if process.env.DISABLE_LOGGING
   if formatParams
@@ -19,10 +22,10 @@ log =
   info:  (message, others...) -> write "INFO", message, others
   warn:  (message, others...) -> write "WARN", message, others
   debug: (message, others...) ->
-    if process.env.DEBUG or window?.debug
+    if debugEnabled
       write "DEBUG", message, others
   event: (message, others...) ->
-    if process.env.DEBUG or window?.debug
+    if debugEnabled
       write "EVENT", message, others
 
 module.exports = log
