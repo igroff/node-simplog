@@ -22,10 +22,10 @@ log =
   info:  (message, others...) -> write "INFO", message, others
   warn:  (message, others...) -> write "WARN", message, others
   debug: (message, others...) ->
-    if debugEnabled
+    if debugEnabled()
       write "DEBUG", message, others
   event: (message, others...) ->
-    if debugEnabled
+    if debugEnabled()
       write "EVENT", message, others
 
 module.exports = log
