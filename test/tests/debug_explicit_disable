@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+export DEBUG=false
+test/bin/log_as_debug
