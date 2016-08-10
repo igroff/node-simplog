@@ -6,8 +6,7 @@
   util = require('util');
 
   debugEnabled = function() {
-    var _ref;
-    return (typeof window !== "undefined" && window !== null ? window.debug : void 0) || ((_ref = process.env.DEBUG) != null ? _ref.toLowerCase() : void 0) !== "false";
+    return (typeof window !== "undefined" && window !== null ? window.debug : void 0) || (process.env.DEBUG && process.env.DEBUG.toLowerCase() !== "false");
   };
 
   write = function(level, message, formatParams) {

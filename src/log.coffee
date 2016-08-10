@@ -1,7 +1,7 @@
 util    = require 'util'
 
 debugEnabled = () ->
-  return window?.debug or process.env.DEBUG?.toLowerCase() isnt "false"
+  return window?.debug or (process.env.DEBUG and process.env.DEBUG.toLowerCase() isnt "false")
 
 write = (level, message, formatParams) ->
   return if process.env.DISABLE_LOGGING
