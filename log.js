@@ -11,7 +11,7 @@
 
   logFunction = util.log;
 
-  if (process.env.SIMPLOG_NO_TIMESTAMP !== "true") {
+  if (process.env.SIMPLOG_NO_TIMESTAMP === "true") {
     logFunction = console.log;
   }
 
