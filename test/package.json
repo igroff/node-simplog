@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "dependencies": {
-    "simplog": "igroff/node-simplog.git#canary"
+    "simplog": "*"
   },
   "engine": {
     "node": "0.10.8"

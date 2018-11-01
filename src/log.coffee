@@ -15,14 +15,14 @@ write = (level, message, formatParams) ->
   if formatParams
     formatParams.unshift message
     if process.env.NOLOGPID or window?
-      util.log "[#{level}] #{util.format.apply util.format, formatParams}"
+      logFunction "[#{level}] #{util.format.apply util.format, formatParams}"
     else
-      util.log "[#{process.pid}] [#{level}] #{util.format.apply util.format, formatParams}"
+      logFunction "[#{process.pid}] [#{level}] #{util.format.apply util.format, formatParams}"
   else
     if process.env.NOLOGPID or window?
-      util.log "[#{level}] #{message}"
+      logFunction "[#{level}] #{message}"
     else
-      util.log "[#{process.pid}] [#{level}] #{message}"
+      logFunction "[#{process.pid}] [#{level}] #{message}"
 
 log =
   error: (message, others...) -> write "ERROR", message, others

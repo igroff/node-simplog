@@ -1,0 +1,4 @@
+#! /usr/bin/env node
+process.env.SIMPLOG_NO_TIMESTAMP='true'
+var log = require('simplog');
+log.info("look ma, an informational message with no timesstamp");
